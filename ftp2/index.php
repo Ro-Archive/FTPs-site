@@ -199,10 +199,10 @@ $ftp_contents = listFtpContentsWithTimeAndSize($server, $ftp_username, $ftp_pass
                     $fileExtension = strtolower(pathinfo($itemName, PATHINFO_EXTENSION));
                     if (in_array($fileExtension, ['mp4', 'png', 'jpeg', 'jpg', 'gif'])) {
                         if ($fileExtension === 'mp4') {
-                            $playUrl = 'https://ro-archive.xyz/ftps/wdig-fc-disneyextreme/Player/?file_name=' . urlencode($itemName) . '&folder=' . urlencode($folder) . '&subfolder=' . urlencode($subfolder);
+                            $playUrl = 'Player/?file_name=' . urlencode($itemName) . '&folder=' . urlencode($folder) . '&subfolder=' . urlencode($subfolder);
                             echo ' | <a class="play-link" href="' . $playUrl . '" target="_blank">Play</a>';
                         } else {
-                            $viewUrl = 'https://ro-archive.xyz/ftps/wdig-fc-disneyextreme/Player/?file_name=' . urlencode($itemName) . '&folder=' . urlencode($folder) . '&subfolder=' . urlencode($subfolder);
+                            $viewUrl = 'Player/?file_name=' . urlencode($itemName) . '&folder=' . urlencode($folder) . '&subfolder=' . urlencode($subfolder);
                             echo ' | <a class="view-link" href="' . $viewUrl . '" target="_blank">View</a>';
                         }
                     }
